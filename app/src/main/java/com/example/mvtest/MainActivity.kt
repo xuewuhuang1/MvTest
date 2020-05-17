@@ -10,7 +10,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val data = DataModel.getData()
-        textView.text = data[0]
-        textView2.text = data[1]
+        dataView.showData(data[0],data[1])
+    }
+    interface IView{
+        fun showData(data1:String,data2:String)
     }
 }
